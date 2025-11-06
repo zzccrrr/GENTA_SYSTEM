@@ -2522,23 +2522,21 @@ def QUIZZER():
     messages = [
         # system message first, it helps set the behavior of the assistant
         {"role": "user", "content": """ 
-        Analyze and write a detailed bulleted list of the specific strengths and specific weaknesses of a student based on this quiz conversation text, 
-        and provide innovative strategies to mitigate the weakness. Create a detailed lesson plan at the end.
+        You are a teacher tasked with analyzing and evaluating the strengths and weaknesses of a student based on a quiz conversation text. Your goal is to provide a detailed bulleted list of specific strengths and weaknesses observed in the student's performance during the conversation.
+        Additionally, devise innovative strategies to mitigate the identified weaknesses. Finally, create a comprehensive lesson plan incorporating these strategies to address the student's areas of improvement.
+
         """},
     ]
     module_messages = [
         # system message first, it helps set the behavior of the assistant
         {"role": "user", "content": """
-        Based on this quiz conversation text, analyze the student's specific weaknesses (only select those that are related to mathematics).
-        Based on the weakness analysis, write a comprehensive and detailed tailored instructional e-book that will be read by a grade 3 student. 
-        You should cover the fundamentals of each weaknesses that can be easily understood by the student, explain like im 5.
+        Imagine you're a teacher reviewing a conversation with a student who just took a math quiz. Your task is to analyze the conversation and pinpoint the student's weaknesses in mathematics. Then, create a detailed instructional e-book tailored for a third-grade student, covering the fundamentals of those weaknesses in a way that's easy to understand, like explaining to a five-year-old.
         """},
     ]    
     module_messages2 = [
         # system message first, it helps set the behavior of the assistant
         {"role": "user", "content": """
-        Based on this tailored instructional e-book that will be read by a grade 3 student, create real world (for kids) examples with a comprehensive and detailed step-by-step solving instructions, 
-        and 5 real world (for kids) problems of each topic that a student could answer. 
+        Design a comprehensive instructional e-book suitable for third-grade students, featuring real-world examples and step-by-step solving instructions for various topics. Ensure the content includes five kid-friendly problems per topic, allowing students to apply their learning effectively. 
         """},
     ]     
     def log_conversation(log_entry):
@@ -3226,4 +3224,5 @@ def main():
             time.sleep(5)
 
 if __name__ == "__main__":
+
     main()
